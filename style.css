@@ -32,3 +32,15 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+/*
+ This design will apply when the screen size is between 550px and 915px. 
+*/
+@media (min-width: 550px) {
+}
+
+/*
+ This design will apply when the screen size is greater than 915px. 
+*/
+@media (min-width: 915px) {
+}

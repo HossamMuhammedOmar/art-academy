@@ -33,14 +33,143 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  padding: 10px 50px;
+  background-color: white;
+}
+
+/* Fix Image size*/
+nav img {
+  max-width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex-basis: 49%;
+  margin-bottom: 8px;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+}
+
+nav li a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.2em;
+  background-color: var(--color3);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+nav li:first-child a {
+  background-color: transparent;
+  padding: 0;
+}
+
+nav li a:hover {
+  background-color: #0a3e65;
+}
+
+nav li:first-child a:hover {
+  background-color: transparent;
+}
+
 /*
  This design will apply when the screen size is between 550px and 915px. 
 */
 @media (min-width: 550px) {
+  header {
+    border-bottom: 3px solid var(--color3);
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav li {
+    flex-basis: auto;
+  }
+
+  nav img {
+    width: 250px;
+  }
+
+  nav li a {
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--color3);
+    padding: 0;
+    margin: 10px 15px;
+    font-weight: bold;
+  }
+
+  nav li a:hover {
+    color: var(--color1);
+    background-color: transparent;
+  }
 }
 
 /*
  This design will apply when the screen size is greater than 915px. 
 */
 @media (min-width: 915px) {
+  header {
+    padding: 0;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+  }
+
+  nav ul {
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  nav li a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+  .order-3 {
+    order: 3;
+  }
+  .order-4 {
+    order: 4;
+  }
+  .order-5 {
+    order: 5;
+  }
 }
